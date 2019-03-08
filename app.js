@@ -24,12 +24,11 @@ Test this function by hand in the console to get it working, and when you think 
 
 // Write your code here
 
-
 function sum(a, b) { //eslint-disable-line
     var added = a + b;
     var return_string = "The sum of " + a + " and " + b + " is " + added + ".";
-    console.log("added" + added);
-    console.log("message: " + return_string);
+ //   console.log("added " + added);
+ //   console.log("message: " + return_string);
 return[added, return_string];
 }
 
@@ -47,13 +46,14 @@ Write a function called multiply() that takes in two numbers as arguments and re
 Test this function by hand in the console to get it working, and when you think it is finished, uncomment the call for the testMultiply() function and see if the test passes.*/
 
 // Write your code here
+
 function multiply(a, b) { //eslint-disable-line
     var mult = a * b;
     var return_string = "The product of " + a + " and " + b + " is " + mult + ".";
-    console.log("product " + mult);
-    console.log("message: " + return_string);
-return[mult, return_string];
-}
+//    console.log("product " + mult);
+//    console.log("message: " + return_string);
+ return[mult, return_string];
+ }
 
 // Here is the test for multiply(); uncomment it to run it
 testMultiply(5,9);
@@ -73,11 +73,23 @@ Test this function by hand in the console to get it working, and when you think 
 
 // Write your code here
 function sumAndMultiply(a, b, c) { //eslint-disable-line
-
+    var d = sum(a, b);
+    var d1 = sum(d[0], c);
+    var d2 = d1[0];
+    var e = multiply(a, b);
+    var e1 = multiply(e[0], c);
+    var e2 = e1[0];
+    var return_string1 = ""; 
+    var return_string2 = "";
+    return_string1 = a + " and " + b + " and " + c + " sum to " + d2 + ".";
+//    console.log("message?: " + return_string1);
+    return_string2 = "The product of " + a + " and " + b + " and " + c + " is " + e2 + ".";
+//    console.log("message: " + return_string2);
+    return [d2, e2, return_string1, return_string2];
 }
 
 // Here is the test for sumAndMultiply(); uncomment it to run it
-// testSumAndMultiply(4,7,5);
+testSumAndMultiply(4,7,5);
 
 // Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop. Don't forget to create a new branch for your work on the next question!
 
