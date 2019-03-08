@@ -7,7 +7,7 @@
 
 // git push origin branchname
 
-// make oull request on github
+// make pull request on github
 
 // merge pull request on github
 
@@ -48,11 +48,15 @@ Test this function by hand in the console to get it working, and when you think 
 
 // Write your code here
 function multiply(a, b) { //eslint-disable-line
-
+    var mult = a * b;
+    var return_string = "The product of " + a + " and " + b + " is " + mult + ".";
+    console.log("product " + mult);
+    console.log("message: " + return_string);
+return[mult, return_string];
 }
 
 // Here is the test for multiply(); uncomment it to run it
-// testMultiply(5,9);
+testMultiply(5,9);
 
 // Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop. Don't forget to create a new branch for your work on the next question!
 
