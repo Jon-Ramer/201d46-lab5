@@ -5,6 +5,8 @@
 
 // do work
 
+// git commit
+
 // git push origin branchname
 
 // make pull request on github
@@ -131,11 +133,17 @@ Test this function by hand in the console to get it working, and when you think 
 
 // Write your code here
 function multiplyArray(multArr) { //eslint-disable-line
-
+    var d = multiply(multArr[0], multArr[1]);
+    var d1 = multiply(d[0], multArr[2]);
+    var d2 = d1[0];
+    var return_string1 = "The numbers " + multArr[0] + "," + multArr[1] + "," + multArr[2] + " have a product of " + d2 + ".";
+//    console.log(return_string1);
+    return [d2, return_string1];
 }
 
 // Here is the test for multiplyArray(); uncomment it to run it
-// testMultiplyArray(testArray);
+var multArr = [2, 3, 4]; //eslint-disable-line
+testMultiplyArray(multArr);
 
 // Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop. 
 
