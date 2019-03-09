@@ -79,11 +79,9 @@ function sumAndMultiply(a, b, c) { //eslint-disable-line
     var e = multiply(a, b);
     var e1 = multiply(e[0], c);
     var e2 = e1[0];
-    var return_string1 = ""; 
-    var return_string2 = "";
-    return_string1 = a + " and " + b + " and " + c + " sum to " + d2 + ".";
+    var return_string1 = a + " and " + b + " and " + c + " sum to " + d2 + ".";
 //    console.log("message?: " + return_string1);
-    return_string2 = "The product of " + a + " and " + b + " and " + c + " is " + e2 + ".";
+    var return_string2 = "The product of " + a + " and " + b + " and " + c + " is " + e2 + ".";
 //    console.log("message: " + return_string2);
     return [d2, e2, return_string1, return_string2];
 }
@@ -104,15 +102,20 @@ IMPORTANT DETAIL: You may not use the arithmetic operator + in this function. To
 Test this function by hand in the console to get it working, and when you think it is finished, uncomment the call for the testSumArray() function and see if the test passes.*/
 
 // Write your code here
-var testArray = [2, 3, 4]; //eslint-disable-line
 
 function sumArray(sumArr) { //eslint-disable-line
-
+    var d = sum(testArray[0], testArray[1]);
+    var d1 = sum(d[0], testArray[2]);
+    var d2 = d1[0];
+    var return_string1 = testArray[0] + "," + testArray[1] + "," + testArray[2] + " was passed in as an array of numbers, and " + d2 + " is their sum.";    
+// console.log(return_string1);
+return [d2, return_string1];
 }
 
 // Here is the test for sumArray(); uncomment it to run it
 
-// testSumArray(testArray);
+var testArray = [2, 3, 4]; //eslint-disable-line
+testSumArray(testArray);
 
 // Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop. Don't forget to create a new branch for your work on the next question!
 
