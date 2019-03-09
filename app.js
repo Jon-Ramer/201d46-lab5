@@ -5,7 +5,9 @@
 
 // do work
 
-// git commit
+// git add .
+
+// git commit -m "message"
 
 // git push origin branchname
 
